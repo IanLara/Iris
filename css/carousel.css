@@ -1,0 +1,258 @@
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+  -webkit-box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  position: relative;
+  margin-left: 15em;
+  margin-right: 5em;
+  margin-top: 40px;
+  z-index: 10;
+  color:#000;
+  
+  text-align: center;
+ }
+
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 18rem;
+  background-color: #fff;
+    
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+}
+
+
+.carousel-caption_izq {
+    position: relative;
+  
+     margin-top: 20px;
+    z-index: 10;
+    left: -20%;
+ 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.boton_naranja{
+  background-color: #e1843e;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.marketing h2 {
+    font-weight: 400;
+}
+
+.marketing_titulo {
+ 
+  text-align: center;
+  font-size: 1.5em;
+  color: #000;
+   line-height: -10px;
+}
+
+
+.marketin_sub_titulo {
+  font-weight: 400;
+  text-align: center;
+  font-size: 3em;
+  color:#fff;
+
+  
+}
+
+.marketing_texto {
+  font-size: 1.2em;
+  color: #000;
+
+}
+
+
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette {
+  background: url(../imagenes/tarot-2414239-1920-700x467.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:red;
+  color: white;
+  padding:20px;
+}
+
+
+.fondo_cursos {
+   background: url(../imagenes/logokvesoterica-interno_05.jpg);
+  background-repeat:repeat;
+  padding: 20px;
+ 
+
+}
+
+
+
+.featurette p {
+  color: white;
+}
+
+.featurette  a {
+  color: white;
+  text-decoration:none;
+  font-size: 2em;
+}
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+   font-size: 3em;
+  letter-spacing: -.05rem;
+  color: white;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 992px) { 
+ 
+
+
+
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+
+@media (max-width:767px){
+
+  .featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+   font-size: 2em;
+  letter-spacing: -.05rem;
+  color: white;
+}
+
+.carousel {
+  margin-bottom: 1rem;
+
+}
+
+.carousel-caption {
+    margin-left: -13%;
+    margin-top: 27px;
+    z-index: 10;
+    color: #000;
+}
+
+.carousel-caption_izq{
+    position: relative;
+    margin-left:27%;
+    margin-top: 8px;
+    z-index: 10;
+    color: #000;
+    text-align: center;
+
+}
+
+
+
+.carousel-item > img {
+
+ display: none;
+}
+
+.carousel-item {background: #306a98;}
+
+.marketing_titulo {
+ 
+  text-align: center;
+  font-size: 1.5em;
+  color: #000;
+    margin:-10px;
+   font-weight: bold;
+}
+
+.marketin_sub_titulo {
+  font-weight: 400;
+  text-align: center;
+  font-size: 2.5em;
+
+  margin:-10px;
+  color:#fff;
+
+  
+}
+.marketing_texto {
+  font-size: 1em;
+    font-weight: bold;
+  color: #000;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
