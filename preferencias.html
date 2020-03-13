@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="imagenes/icon_logo_03.gif">
+    <title>IRIS Inspeccion, Retrabajo, Sorteo 
+  </title>
+
+    <!-- Bootstrap core CSS -->
+    <link async href="css/bootstrap.css" rel="stylesheet">
+    <link async href="css/carousel.css" rel="stylesheet">
+    <link  async rel="stylesheet" href="css/estilos.css">
+    <link  async rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </head>
+  <style>
+    #notas, #resenas, #editar_datos {
+      display: none;
+    }
+  </style>
+  <body>
+  
+
+
+  <!-- Content here -->
+
+<header>
+          
+<div class="container fixed-top mb-5" style="background: #0E4E63; border-bottom:3px solid #FCC213 ">
+    <div class="row">
+              <div class="col-md-4 d-none d-md-block"><img src="imagenes/logo.png" alt="IRIS" class="logo_iris"></div>
+              <div class="col-sm-6 col-md-4 text-center user_text"> <i class="fas fa-user"></i> Ian Rodrigo </div>  
+              <div class="col-sm-6 col-md-4 iconos_menu ">
+                <div class="text-center">
+                <a href="#"><i class="fas fa-th"></i></a>
+                <a href="#"><i class="fas fa-user-cog"></i></a>
+                <a href="#"><i class="fas fa-bell"></i></a>
+                <a href="#"><i class="fas fa-question-circle"></i></a>                                  
+                </div>
+              </div>   
+  </div> 
+</div>       
+</header>
+
+<main class="fondo">
+<section>
+<div class="container mt-5" style="background: #E0E0E0;">
+  <div class="row">
+    <div class="col-4">
+      <div class="titulo_seccion"><a href="#" onclick="show_preferencias()">Preferencias</a></div>
+    </div>
+    <div class="col-4">
+      <div class="titulo_seccion"><a href="#" onclick="show_resenas()">Reseñas</a></div>
+    </div>
+    <div class="col-4">
+      <div class="titulo_seccion"><a href="#" onclick="editar_perfil()">Editar Perfil</a></div>
+    </div>
+</div>
+<div class="contenedor_cuerpo">
+
+  <section id="preferencias">
+  <div class="card mb-2">
+  <div class="card-body">  
+  <h1>  <i class="fas fa-user-cog fa-2x float-let"></i> Mi perfil</h1>
+  </div>
+</div>
+  
+<div class="row">
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <i class="fas fa-user fa-2x"></i> <br>
+        Ian Rodrigo Morales Lara</h5>
+        <p class="card-text text-center">
+          <a href="mailto:correo@mail.com">ianlara@irs.com.mx</a> <br>
+          04455787424 <br>
+          Ing. Sistemas Administrativas <br>
+        </p>       
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-9">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Ajustes</h5>
+          <form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Planta</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  
+</form>
+    <a href="#" class="btn btn-primary">Aceptar</a>
+     <a href="#" class="btn btn-primary">Cancelar</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section id="resenas">
+  <div class="card mb-2">
+  <div class="card-body">  
+  <h1>  
+  <i class="fas fa-user-edit fa-2x float-let"></i>  Reseñas</h1>
+  </div>
+</div> 
+<div class="row">
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <i class="fas fa-user fa-2x"></i> <br>
+        Ian Rodrigo Morales Lara</h5>
+        <p class="card-text text-center">
+          <a href="mailto:correo@mail.com">ianlara@irs.com.mx</a> <br>
+          04455787424 <br>
+          Ing. Sistemas Administrativas <br>
+        </p>       
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="card">     
+      <div class="card-body" >
+        <a href="#" onclick="show_notes()" class="btn btn-primary btn-sm float-right">  Añadir Reseña <i class="fas fa-plus-circle"></i></a>       
+        <h5 class="card-title">  Historial de Reseñas</h5>
+    <form class="mb-5" id="notas">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Anadir nota</label>
+   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+   <a href="#" class="btn btn-primary">Aceptar</a>
+     <a href="#" class="btn btn-primary">Cancelar</a>
+  
+</form>
+          
+        <!--notas-->
+        <div class="card">
+              <div class="card-body" style="background: #E2F7FE;">
+              <p><i class="fas fa-quote-right"></i>
+              <strong> Reseña1</strong> <br>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, possimus quae ipsum debitis ipsa, animi id illo consequuntur ab aut veritatis repudiandae at tempora suscipit ipsam ad cum praesentium harum.
+              <i class="fas fa-quote-left"></i>
+            </p>
+        </div>
+       </div>
+
+         <div class="card mt-3 mb-3">
+              <div class="card-body" style="background: #E2F7FE;">
+              <p><i class="fas fa-quote-right"></i>
+              <strong> Reseña2</strong> <br>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, possimus quae ipsum debitis ipsa, animi id illo consequuntur ab aut veritatis repudiandae at tempora suscipit ipsam ad cum praesentium harum.
+              <i class="fas fa-quote-left"></i>
+            </p>
+        </div>
+       </div>
+  <!--notas-->
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!--editar datos-->
+<section id="editar_datos">
+  <div class="card mb-2">
+  <div class="card-body">  
+  <h1>  
+  <i class="fas fa-user-edit fa-2x float-let"></i> Editar datos</h1>
+  </div>
+</div> 
+<div class="row">
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <i class="fas fa-user fa-2x"></i> <br>
+        Ian Rodrigo Morales Lara</h5>
+        <p class="card-text text-center">
+          <a href="mailto:correo@mail.com">ianlara@irs.com.mx</a> <br>
+          04455787424 <br>
+          Ing. Sistemas Administrativas <br>
+        </p>       
+      </div>
+    </div>
+  </div>
+   <div class="col-sm-9">
+      
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Usuario</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Inf. Biiográfica</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Inf. Empleado</a>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="card">
+             <div class="card-body">
+        <h5 class="card-title">Editar Perfil</h5>
+
+          <form>
+              <div class="form-group">
+                  <label for="exampleFormControlInput1">Datos del Usuario</label>
+                  <input  type="text-center" class="form-control" id="datos_usuarios" placeholder="Ian Rodrigo Morales">
+              </div>
+             <div class="form-group">
+             <div class="row">
+              <div class="col">
+                <label for="exampleFormControlInput1">Numero de Empleado</label>
+              <input  type="text-center" class="form-control" id="num_empleado" placeholder="92454">
+              </div>
+              <div class="col">
+                 <label for="exampleFormControlInput1">Puesto </label>
+              <input  type="text-center" class="form-control" id="num_empleado" placeholder="92454">
+              </div>
+            </div> 
+          </div>
+          <div class="form-group">
+                   <div class="row">
+                    <div class="col">
+                     <a href="#" class="btn btn-primary">Aceptar</a>
+                     <a href="#" class="btn btn-primary">Cancelar</a>
+                    </div>
+                </div>
+              </div>
+          </form>  
+        </div> 
+      </div>  
+
+
+
+  </div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+      <div class="card">
+             <div class="card-body">
+        <h5 class="card-title">Informacion Biográfica</h5>
+
+          <form>
+              <div class="form-group">
+                  <label for="exampleFormControlInput1">Nombre</label>
+                  <input  type="text-center" class="form-control" id="datos_usuarios" placeholder="Ian Rodrigo Morales">
+              </div>
+
+               <div class="form-group">
+                  <label for="exampleFormControlInput1">Apellido</label>
+                  <input  type="text-center" class="form-control" id="datos_usuarios" placeholder="Ian Rodrigo Morales">
+              </div>
+        
+
+             <div class="form-group">
+             <div class="row">
+              <div class="col">
+                <label for="exampleFormControlInput1">Fecha de Cumpleaños</label>
+              <input  type="text-center" class="form-control" id="num_empleado" placeholder="">
+              </div>
+              <div class="col">
+                 <label for="exampleFormControlInput1">Estado del País </label>
+              <input  type="text-center" class="form-control" id="num_empleado" placeholder="">
+              </div>
+            </div> 
+          </div>
+
+           <div class="form-group">
+             <div class="row">
+              <div class="col">
+                <label for="exampleFormControlInput1">Lugar de Nacimiento</label>
+              <input  type="text-center" class="form-control" id="num_empleado" placeholder="">
+              </div>
+              <div class="col">
+                 <label for="exampleFormControlInput1">Estado Civil </label>
+              <input  type="text-center" class="form-control" id="num_empleado" placeholder="">
+              </div>
+            </div> 
+          </div>
+
+
+          <div class="form-group">
+                   <div class="row">
+                    <div class="col">
+                     <a href="#" class="btn btn-primary">Aceptar</a>
+                     <a href="#" class="btn btn-primary">Cancelar</a>
+                    </div>
+                </div>
+              </div>
+          </form>  
+        </div> 
+      </div>  
+
+
+
+  </div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+    
+
+       <div class="card">
+             <div class="card-body">
+        <h5 class="card-title">Informacion Biográfica</h5>
+
+          <form>
+              <div class="form-group">
+                  <label for="exampleFormControlInput1">Nombre</label>
+                  <input  type="text-center" class="form-control" id="datos_usuarios" placeholder="Ian Rodrigo Morales">
+              </div>
+
+               <div class="form-group">
+                  <label for="exampleFormControlInput1">Apellido</label>
+                  <input  type="text-center" class="form-control" id="datos_usuarios" placeholder="Ian Rodrigo Morales">
+              </div>
+        
+
+             <div class="form-group">
+             <div class="row">
+              <div class="col">
+                <label for="exampleFormControlInput1">Fecha de Cumpleaños</label>
+              <input  type="text-center" class="form-control" id="num_empleado" placeholder="">
+              </div>
+              <div class="col">
+                 <label for="exampleFormControlInput1">Estado del País </label>
+              <input  type="text-center" class="form-control" id="num_empleado" placeholder="">
+              </div>
+            </div> 
+          </div>
+
+           <div class="form-group">
+             <div class="row">
+              <div class="col">
+                <label for="exampleFormControlInput1">Lugar de Nacimiento</label>
+              <input  type="text-center" class="form-control" id="num_empleado" placeholder="">
+              </div>
+              <div class="col">
+                 <label for="exampleFormControlInput1">Estado Civil </label>
+              <input  type="text-center" class="form-control" id="num_empleado" placeholder="">
+              </div>
+            </div> 
+          </div>
+
+
+          <div class="form-group">
+                   <div class="row">
+                    <div class="col">
+                     <a href="#" class="btn btn-primary">Aceptar</a>
+                     <a href="#" class="btn btn-primary">Cancelar</a>
+                    </div>
+                </div>
+              </div>
+          </form>  
+        </div> 
+      </div>  
+
+
+
+
+  </div>
+</div>
+
+    </div>
+
+      
+
+    
+   
+</div>
+</section>
+</div>
+
+&nbsp;
+
+
+</main>
+
+
+  <!-- ./Footer -->
+<script>
+
+   function show_notes(){
+    notas = document.getElementById('notas');
+    notas.style.display = 'block';
+   }
+
+
+   function show_preferencias(){
+    resenas = document.getElementById('resenas');
+    preferencias = document.getElementById('preferencias');
+    preferencias.style.display = 'block';
+    resenas.style.display = 'none';
+    editar_datos.style.display = 'none';
+    console.log('jala prefrencias');
+   }
+
+   function show_resenas(){
+    resenas = document.getElementById('resenas');
+    preferencias = document.getElementById('preferencias');
+    preferencias.style.display = 'none';
+    resenas.style.display = 'block';
+    editar_datos.style.display = 'none';
+    console.log('jala prefrencias');
+   }
+
+
+   function editar_perfil(){
+    editar_datos = document.getElementById('editar_datos');
+    resenas = document.getElementById('resenas');
+    preferencias = document.getElementById('preferencias');
+    preferencias.style.display = 'none';
+    resenas.style.display = 'none';
+    editar_datos.style.display = 'block';
+    console.log('jala prefrencias');
+   }
+
+
+
+</script>
+     
+
+ 
+
+
+
+
+      
+
+
+
+
+
+
+      
+
+
+
+
+ 
+  
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+</body></html>  
