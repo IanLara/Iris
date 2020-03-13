@@ -26,6 +26,15 @@
  
 }
 
+.contenedor_cuerpo{
+  width: 100%;
+  margin:10px;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  
+}
 
 .parte_menu{
   width: 70px;
