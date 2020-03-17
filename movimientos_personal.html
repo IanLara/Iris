@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="imagenes/icon_logo_03.gif">
+    <title>IRIS Inspeccion, Retrabajo, Sorteo 
+  </title>
+
+    <!-- Bootstrap core CSS -->
+    <link async href="css/bootstrap.css" rel="stylesheet">
+    <link async href="css/carousel.css" rel="stylesheet">
+    <link  async rel="stylesheet" href="css/estilos.css">
+    <link  async rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </head>
+  <style>
+   
+    #detalles_vivienda, 
+    .numerador_ordenes_l1, 
+    .numerador_ordenes_l2, 
+    .numerador_ordenes_l3,
+    #detalle_zonas{
+      display: none;
+    }
+  </style>
+  <body>
+  
+
+
+  <!-- Content here -->
+
+<header>
+          
+<div class="container fixed-top mb-5" style="background: #0E4E63; border-bottom:3px solid #FCC213 ">
+    <div class="row">
+              <div class="col-md-4 d-none d-md-block"><img src="imagenes/logo.png" alt="IRIS" class="logo_iris"></div>
+              <div class="col-sm-6 col-md-4 text-center user_text"> <i class="fas fa-user"></i> Ian Rodrigo </div>  
+              <div class="col-sm-6 col-md-4 iconos_menu ">
+                <div class="text-center">
+                <a href="#"><i class="fas fa-th"></i></a>
+                <a href="#"><i class="fas fa-user-cog"></i></a>
+                <a href="#"><i class="fas fa-bell"></i></a>
+                <a href="#"><i class="fas fa-question-circle"></i></a>                                  
+                </div>
+              </div>   
+  </div> 
+</div>       
+</header>
+
+<main class="fondo">
+
+<div class="container mt-5" style="background: #E0E0E0;">
+  <div class="row">
+   
+
+<div class="contenedor_cuerpo">
+
+  <section id="preferencias">
+  <div class="card mb-2">
+  <div class="card-body">  
+  <h1><i class="fas fa-home fa-2x float-let"></i> Movimientos de Personal y por zonas</h1>
+  <div>
+    
+
+    </div>
+  </div>
+</div>
+
+<section id="zonas">
+  <div class="row">
+    <div class="col-md-12 mt-2 mb-2">
+      <div class="card">
+         <div class="card-body">
+            <div class="slider_container">
+              <div class="row">
+                <div class="col">
+                  <form class="form-inline mb-5">
+                    <p class="h4 color_azul m-2">Buscar persona o  dirección </p>
+                    <input class="form-control mr-sm-2 color_azul_suave" width="100%" type="search" placeholder="Search" aria-label="Buscar" onblur="buscar()">
+                </form>
+                </div>
+                <div class="row">
+                    <div class="contenedor" id="box1" onclick="show_zonas()">
+                        <div class="numerador_ordenes numerador_ordenes_l1" id="nl1">1</div>
+                        <div class="contenido3">
+                           <i class="fas fa-home icono_zona"></i> 
+                           <p class="contendor_titulo">Zona 1</p>
+                             
+                        </div>
+                    </div>           
+                    <div class="contenedor">
+                        <div class="numerador_ordenes numerador_ordenes_l1">2</div>
+                        <div class="contenido3">
+                           <i class="fas fa-home icono_zona"></i> 
+                            <p class="contendor_titulo">Zona 2</p>
+                        </div>
+                    </div>                       
+                    <div class="contenedor">
+                        <div class="numerador_ordenes numerador_ordenes_l1">3</div>
+                        <div class="contenido3">
+                            <i class="fas fa-home icono_zona"></i> 
+                            <p class="contendor_titulo">Zona 3</p> 
+                        </div>
+                    </div>           
+                </div>
+                <div class="row">
+                    <div class="contenedor">
+                        <div class="numerador_ordenes numerador_ordenes_l2">4</div>
+                        <div class="contenido3">
+                        <i class="fas fa-home icono_zona"></i> 
+                           <p class="contendor_titulo">Zona 4</p>
+                        </div>
+                    </div>           
+                    <div class="contenedor">
+                        <div class="numerador_ordenes numerador_ordenes_l2">5</div>
+                        <div class="contenido3">
+                        <i class="fas fa-home icono_zona"></i> 
+                            <p class="contendor_titulo">Zona 5</p>   
+                        </div>
+                    </div>                       
+                    <div class="contenedor">
+                        <div class="numerador_ordenes numerador_ordenes_l2">6</div>
+                        <div class="contenido3">
+                      <i class="fas fa-home icono_zona"></i> 
+                            <p class="contendor_titulo">Zona 6</p>
+                        </div>
+                    </div>           
+                </div>
+                <div class="row">
+                    <div class="contenedor">
+                        <div class="numerador_ordenes numerador_ordenes_l3">7</div>
+                        <div class="contenido3">
+                        <i class="fas fa-home icono_zona"></i> 
+                            <p class="contendor_titulo">Zona 7</p>
+                        </div>
+                    </div>           
+                    <div class="contenedor">
+                        <div class="numerador_ordenes numerador_ordenes_l3">8</div>
+                        <div class="contenido3">
+                        <i class="fas fa-home icono_zona"></i> 
+                            <p class="contendor_titulo">Zona 8</p>
+                        </div>
+                    </div>                     
+                    <div class="contenedor">
+                        <div class="numerador_ordenes numerador_ordenes_l3">9</div>
+                        <div class="contenido3">
+                        <i class="fas fa-home icono_zona"></i> 
+                           <p class="contendor_titulo">Zona 9</p> 
+                    </div>
+            </div>
+     </div> 
+         </div>
+        
+
+      </div>
+
+
+
+    </div>
+    
+  </div>
+  
+
+
+</section>
+
+
+
+
+
+
+<section id="detalle_zonas">
+<div class="row">
+  <div class="col-md-4">
+      <div class="card">
+     <div class="card-body">
+       
+        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>
+        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>   
+        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>
+        <i class="fas fa-home fa-2x m-2" style="color: #710404;"></i>
+        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>
+        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>
+        <i class="fas fa-home fa-2x m-2" style="color: #710404;"></i>
+        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>
+        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>
+
+     </div> 
+                                         
+    </div> 
+
+     <p class="text-center mt-2 "><a href="#" class="btn btn-primary btn-lg" onclick="show_detalles()">Detalles de vivienda</a>  </p>        
+    </div>
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-body">
+         <h4><i class="fas fa-home fa-lg m-2" style="color: #56CCF2;"></i> Valladolid no 40  <br>Col. Roma Del Valle, Cp. 07810</h4>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60219.04580236833!2d-99.19758473978743!3d19.382555433119457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa90a54df60c5d1a0!2sBuddhist%20center%20of%20Mexico%20City%20AC!5e0!3m2!1sen!2smx!4v1584397270337!5m2!1sen!2smx" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+         
+   
+    
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="detalles_vivienda">
+  <div class="card mb-2 mt-5">
+    <div class="card-header">
+    <div class="row">
+        <div class="col-md-9">
+          <h4><i class="fas fa-home fa-lg m-10 float-let" style="color: #56CCF2;"></i> Valladolid Num.40 Int 101  <br>Col. Valle Sur, Municipio: Benito Juarez. C.P 07810</h4>
+        
+      </div>
+      <div class="col-md-3"><i class="fas fa-chevron-circle-left fa-2x" style="color: #56CCF2;"></i>
+      <strong>Regresar a Zonas</strong></div>
+    </div>
+     
+    
+    </div>
+    <div class="card-body"> 
+        <ul class="nav nav-pills">
+  <li class="nav-item dropdown">
+    <a class="nav-link active dropdown-toggle mr-2" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Datos Inquilinos</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Código QR</a>
+      <a class="dropdown-item" href="#">Datos Generales</a>
+      <a class="dropdown-item" href="#">Historial de Vivienda</a>
+      <a class="dropdown-item" href="#">Mobiliario</a>
+      <a class="dropdown-item" href="#">Colaboradores</a>
+      <a class="dropdown-item" href="#">Reparacioness</a>
+      
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Datos Inmueble</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Código QR</a>
+      <a class="dropdown-item" href="#">Check list vivienda</a>
+      <a class="dropdown-item" href="#">Check list mobiliario</a>
+      <a class="dropdown-item" href="#">Reparaciones</a>     
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Reportes de la  vivienda</a>
+  </li>
+</ul>
+   
+
+     </div>
+    
+
+
+
+  </div>
+
+
+
+
+  <div class="card mb-2">
+  <div class="card-body">
+    <h2>CODIGO QR</h2>
+
+<div class="row">
+  <div class="col-md-4">
+     <div class="form-group">
+    <label for="exampleFormControlSelect1">Seleccione Año</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1970</option>
+      <option>1973</option>
+      <option>1974</option>      
+    </select>
+  </div>
+</div> 
+
+  <div class="col-md-4">
+    <div class="form-group">
+    <label for="exampleFormControlSelect1">Mes</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1970</option>
+      <option>1973</option>
+      <option>1974</option>      
+    </select>
+  </div>   
+  </div>
+
+  <div class="col-md-4">
+   <div class="form-group">
+    <label for="exampleFormControlSelect1">Supervisor</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1970</option>
+      <option>1973</option>
+      <option>1974</option>      
+    </select>
+  </div>
+
+  </div>
+</div>
+
+</div>
+
+
+
+ <div class="card mb-2 mt-2">
+    <div class="card-body">
+      <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Mes</th>
+      <th scope="col">Rentas</th>
+      <th scope="col">Servicios</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Enero</td>
+      <td>Pendiente</td>
+       <td>Pendiente</td>
+       <td><button type="button" class="btn btn-info">Editar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Febrero</td>
+       <td>Pendiente</td>
+        <td>Pendiente</td>
+       <td><button type="button" class="btn btn-info">Editar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Marzo</td>
+       <td>Pendiente</td>
+        <td>Pendiente</td>
+      <td><button type="button" class="btn btn-info">Editar</button></td>
+    </tr>
+  </tbody>
+</table>
+
+ <p class="text-center mt-2 "><a href="#" class="btn btn-primary btn-lg">Editar Tabla</a>  </p> 
+    </div>
+  </div>
+</div>
+
+  
+  
+</section>
+
+
+<!--editar datos-->
+
+      
+
+    
+   
+</div>
+</section>
+</div>
+
+&nbsp;
+
+
+</main>
+
+
+  <!-- ./Footer -->
+<script>
+
+    function show_zonas(){
+    zonas = document.getElementById('zonas');
+    detalles_zonas = document.getElementById('detalles_vivienda');
+    detalle_zonas.style.display = 'block';
+    zonas.style.display = 'none';
+   }
+
+
+   function show_detalles(){
+    detalles_vivienda = document.getElementById('detalles_vivienda');
+    detalles_vivienda.style.display = 'block';
+   }
+
+
+   function buscar() {
+  var x = document.getElementById("box1");
+      b = document.getElementById('nl1');
+      b.style.display = 'block';
+   x.style.background = 'orange';
+
+
+}
+
+
+
+</script>
+     
+
+ 
+
+
+
+
+      
+
+
+
+
+
+
+      
+
+
+
+
+ 
+  
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+
+
+
+
+
+</body></html>  
