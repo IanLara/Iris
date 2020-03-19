@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="imagenes/icon_logo_03.gif">
+    <title>IRIS Inspeccion, Retrabajo, Sorteo 
+  </title>
+
+    <!-- Bootstrap core CSS -->
+    <link async href="css/bootstrap.css" rel="stylesheet">
+    <link async href="css/carousel.css" rel="stylesheet">
+    <link  async rel="stylesheet" href="css/estilos.css">
+    <link  async rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </head>
+ 
+  <body>
+  
+
+
+  <!-- Content here -->
+
+<header>
+          
+<div class="container fixed-top mb-5" style="background: #0E4E63; border-bottom:3px solid #FCC213 ">
+    <div class="row">
+              <div class="col-md-4 d-none d-md-block"><img src="imagenes/logo.png" alt="IRIS" class="logo_iris"></div>
+              <div class="col-sm-6 col-md-4 text-center user_text"> <i class="fas fa-user"></i> Ian Rodrigo </div>  
+              <div class="col-sm-6 col-md-4 iconos_menu ">
+                <div class="text-center">
+                <a href="#"><i class="fas fa-th"></i></a>
+                <a href="#"><i class="fas fa-user-cog"></i></a>
+                <a href="#"><i class="fas fa-bell"></i></a>
+                <a href="#"><i class="fas fa-question-circle"></i></a>                                  
+                </div>
+              </div>   
+  </div> 
+</div>       
+</header>
+
+<main class="fondo">
+<section>
+<div class="container mt-5" style="background: #E0E0E0;">
+  <div class="row">
+    <div class="col-6">
+      <div class="titulo_seccion"><a href="#" onclick="show_preferencias()">Rentas</a></div>
+    </div>
+    <div class="col-6">
+      <div class="titulo_seccion"><a href="#" onclick="show_resenas()">Servicios</a></div>
+    </div>
+    
+</div>
+<div class="contenedor_cuerpo">
+
+<section id="resenas">
+  <div class="card mb-2">
+  <div class="card-body">  
+    <h2>Historal de Vivienda</h2>
+  <div class="row">
+  <div class="col-md-4">
+     <div class="form-group">
+    <label for="exampleFormControlSelect1">Seleccione Año</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1970</option>
+      <option>1973</option>
+      <option>1974</option>      
+    </select>
+  </div>
+</div> 
+
+  <div class="col-md-4">
+    <div class="form-group">
+    <label for="exampleFormControlSelect1">Mes</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1970</option>
+      <option>1973</option>
+      <option>1974</option>      
+    </select>
+  </div>   
+  </div>
+
+  <div class="col-md-4">
+   <div class="form-group">
+    <label for="exampleFormControlSelect1">Importe</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1300</option>
+      <option>1400</option>
+      <option>2500</option>      
+    </select>
+  </div>
+</div>
+</div>
+<p class="text-center mt-2 "><a href="#" class="btn btn-primary btn-lg">Filtrar</a>  </p>
+    </div>
+    </div>
+
+ <div class="card mb-2">
+  <div class="card-body">
+      <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Mes</th>
+      <th scope="col">Rentas</th>
+      <th scope="col">Servicios</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Enero</td>
+      <td>Pendiente</td>
+       <td>Pendiente</td>
+       <td><button type="button" class="btn btn-info">Editar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Febrero</td>
+       <td>Pendiente</td>
+        <td>Pendiente</td>
+       <td><button type="button" class="btn btn-info">Editar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Marzo</td>
+       <td>Pendiente</td>
+        <td>Pendiente</td>
+      <td><button type="button" class="btn btn-info">Editar</button></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+  </div>
+  </div>     
+
+    
+   
+
+</section>
+</div>
+
+&nbsp;
+
+
+</main>
+
+
+  <!-- ./Footer -->
+<script>
+
+   function show_notes(){
+    notas = document.getElementById('notas');
+    notas.style.display = 'block';
+   }
+
+
+   function show_preferencias(){
+    resenas = document.getElementById('resenas');
+    preferencias = document.getElementById('preferencias');
+    preferencias.style.display = 'block';
+    resenas.style.display = 'none';
+    editar_datos.style.display = 'none';
+    console.log('jala prefrencias');
+   }
+
+   function show_resenas(){
+    resenas = document.getElementById('resenas');
+    preferencias = document.getElementById('preferencias');
+    preferencias.style.display = 'none';
+    resenas.style.display = 'block';
+    editar_datos.style.display = 'none';
+    console.log('jala prefrencias');
+   }
+
+
+   function editar_perfil(){
+    editar_datos = document.getElementById('editar_datos');
+    resenas = document.getElementById('resenas');
+    preferencias = document.getElementById('preferencias');
+    preferencias.style.display = 'none';
+    resenas.style.display = 'none';
+    editar_datos.style.display = 'block';
+    console.log('jala prefrencias');
+   }
+
+
+
+</script>
+     
+
+ 
+
+
+
+
+      
+
+
+
+
+
+
+      
+
+
+
+
+ 
+  
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+</body></html>  
