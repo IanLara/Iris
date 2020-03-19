@@ -16,14 +16,15 @@
     <link  async rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
   <style>
-   
+   /*
     #detalles_vivienda, 
     .numerador_ordenes_l1, 
     .numerador_ordenes_l2, 
     .numerador_ordenes_l3,
-    #detalle_zonas{
+    #detalle_zonas,
+    #notas{
       display: none;
-    }
+    }*/
   </style>
   <body>
   
@@ -60,7 +61,7 @@
   <section id="preferencias">
   <div class="card mb-2">
   <div class="card-body">  
-  <h1><i class="fas fa-home fa-2x float-let"></i> Movimientos de Personal y por zonas</h1>
+  <h1><i class="fas fa-home fa-2x float-let"></i> Movimientos de Personal y por zonas </h1>
   <div>
     
 
@@ -77,18 +78,21 @@
               <div class="row">
                 <div class="col">
                   <form class="form-inline mb-5">
-                    <p class="h4 color_azul m-2">Buscar persona o  dirección </p>
+                    <p class="h4 color_azul m-2">Buscar  dirección </p>
                     <input class="form-control mr-sm-2 color_azul_suave" width="100%" type="search" placeholder="Search" aria-label="Buscar" onblur="buscar()">
+
                 </form>
+                 <p class="text-center" style="font-size: 2em;"> 20 Lugares disponibles</p>
                 </div>
                 <div class="row">
                     <div class="contenedor" id="box1" onclick="show_zonas()">
-                        <div class="numerador_ordenes numerador_ordenes_l1" id="nl1">1</div>
-                        <div class="contenido3">
+
+                        <div class="numerador_ordenes numerador_ordenes_l1" id="nl1"><i class="fas fa-check "></i></div>
+                        <div class="contenido3" >
                            <i class="fas fa-home icono_zona"></i> 
-                           <p class="contendor_titulo">Zona 1</p>
-                             
+                           <p class="contendor_titulo">Zona 1</p>                           
                         </div>
+                     
                     </div>           
                     <div class="contenedor">
                         <div class="numerador_ordenes numerador_ordenes_l1">2</div>
@@ -176,28 +180,68 @@
   <div class="col-md-4">
       <div class="card">
      <div class="card-body">
-       
-        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>
-        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>   
-        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>
-        <i class="fas fa-home fa-2x m-2" style="color: #710404;"></i>
-        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>
-        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>
-        <i class="fas fa-home fa-2x m-2" style="color: #710404;"></i>
-        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>
-        <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i>
+          <div class="card-header">
+    <strong>Zona 1, 20 lugares disponibles</strong>
+  </div>
+       <div  class="box_casa">
+        <div class="text-center"> <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i></div>
+        <div class="text-center"> <strong>2</strong></div>
+       </div>
 
-     </div> 
-                                         
+       <div  class="box_casa">
+        <div class="text-center"> <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i></div>
+        <div class="text-center"> <strong>2</strong></div>
+       </div>
+
+
+       <div  class="box_casa">
+        <div class="text-center"> <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i></div>
+        <div class="text-center"> <strong>2</strong></div>
+       </div>
+
+
+       <div  class="box_casa">
+        <div class="text-center"> <i class="fas fa-home fa-2x m-2" style="color:  #710404;"></i></div>
+        <div class="text-center"> <strong>2</strong></div>
+       </div>
+
+       <div  class="box_casa">
+        <div class="text-center"> <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i></div>
+        <div class="text-center"> <strong>2</strong></div>
+       </div>
+
+        <div  class="box_casa">
+        <div class="text-center"> <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i></div>
+        <div class="text-center"> <strong>2</strong></div>
+       </div>
+
+
+        <div  class="box_casa">
+        <div class="text-center"> <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i></div>
+        <div class="text-center"> <strong>2</strong></div>
+       </div>
+
+        <div  class="box_casa">
+        <div class="text-center"> <i class="fas fa-home fa-2x m-2" style="color: #56CCF2;"></i></div>
+        <div class="text-center"> <strong>2</strong></div>
+       </div>
+
+
+    </div>                                     
     </div> 
 
-     <p class="text-center mt-2 "><a href="#" class="btn btn-primary btn-lg" onclick="show_detalles()">Detalles de vivienda</a>  </p>        
+     <p class="text-center mt-2 "><a href="#" class="btn btn-primary btn-lg" onclick="show_detalles()" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Detalles de vivienda</a>  </p>        
     </div>
   <div class="col-md-8">
     <div class="card">
       <div class="card-body">
+        <div style="float: right;"><i class="fas fa-chevron-circle-left fa-2x" style="color: #56CCF2;"></i>
+      <strong>Regresar a Zonas</strong></div>
          <h4><i class="fas fa-home fa-lg m-2" style="color: #56CCF2;"></i> Valladolid no 40  <br>Col. Roma Del Valle, Cp. 07810</h4>
-       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60219.04580236833!2d-99.19758473978743!3d19.382555433119457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa90a54df60c5d1a0!2sBuddhist%20center%20of%20Mexico%20City%20AC!5e0!3m2!1sen!2smx!4v1584397270337!5m2!1sen!2smx" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        
+           
+
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60219.04580236833!2d-99.19758473978743!3d19.382555433119457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa90a54df60c5d1a0!2sBuddhist%20center%20of%20Mexico%20City%20AC!5e0!3m2!1sen!2smx!4v1584397270337!5m2!1sen!2smx" width="100%" height="200px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
          
    
     
@@ -214,8 +258,7 @@
           <h4><i class="fas fa-home fa-lg m-10 float-let" style="color: #56CCF2;"></i> Valladolid Num.40 Int 101  <br>Col. Valle Sur, Municipio: Benito Juarez. C.P 07810</h4>
         
       </div>
-      <div class="col-md-3"><i class="fas fa-chevron-circle-left fa-2x" style="color: #56CCF2;"></i>
-      <strong>Regresar a Zonas</strong></div>
+     
     </div>
      
     
@@ -342,9 +385,115 @@
     </div>
   </div>
 </div>
+</section>
+<section>
+  <div class="card mb-2 mt-5">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-12">
+           <h2>Reportes</h2>
 
-  
-  
+              
+<div class="row">
+      <div class="col"><h4 class="color_azul"> <i class="fas fa-filter color_azul"></i>Filtrar por:</h4></div>
+</div>
+  <div class="row">
+      <div class="col-md-4">
+          <div class="form-group">
+          <label for="exampleFormControlSelect1">Seleccione Reporte por Año</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>1970</option>
+            <option>1973</option>
+            <option>1974</option>      
+          </select>
+        </div>
+      </div> 
+      <div class="col-md-4">
+          <div class="form-group">
+          <label for="exampleFormControlSelect1">Mes</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Enero</option>
+            <option>Febrero</option>
+            <option>Marzo</option>      
+          </select>
+        </div>   
+      </div>
+  <div class="col-md-4">
+   <div class="form-group">
+    <label for="exampleFormControlSelect1">Tipo</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Cerrajería</option>
+      <option>Plolmeria</option>
+      <option>Matieriales Varios</option>      
+    </select>
+  </div>
+
+
+</div>
+
+<div class="card">
+  <div class="card-header color_azul_suave">
+    <strong>Reporte Numero 1234</strong>
+
+    <div class="float-right"><h6 style="float: left;">Estatus</h6><i class="fas fa-traffic-light fa-lg mx-2" style="color:green; "></i></div>
+  </div>
+      <div class="card-body">
+        <div id="repo1">
+        <h5 class="card-title">Cerrajería</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dignissimos, possimus vitae perferendis libero eaque! Beatae aliquam modi reprehenderit soluta, aliquid, quisquam distinctio sed, doloribus qui rem commodi assumenda harum?</p>
+        <a href="#" class="btn btn-primary" onclick="document.getElementById('notas').style.display='block'">Comentar</a>
+
+          <form class="mb-5" id="notas">
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Anadir comentario</label>
+             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+             <a href="#" class="btn btn-primary">Aceptar</a>
+               <a href="#" class="btn btn-danger" onclick="document.getElementById('notas').style.display='none'" >Cancelar</a>
+             </form>
+           </div>
+          </div>
+    </div>
+        
+
+
+        </div>
+      </div>
+  </div>
+
+<div class="card">
+             <div class="card-body">
+        <h5 class="card-title">Agregar Reporte</h5>
+
+          <form>
+              <div class="form-group">
+                  <label for="exampleFormControlInput1">Datos del Usuario</label>
+                  <input type="text-center" class="form-control" id="datos_usuarios" placeholder="Ian Rodrigo Morales">
+              </div>
+             <div class="form-group">
+             <div class="row">
+              <div class="col">
+                <label for="exampleFormControlInput1">Numero de Empleado</label>
+              <input type="text-center" class="form-control" id="num_empleado" placeholder="92454">
+              </div>
+              <div class="col">
+                 <label for="exampleFormControlInput1">Puesto </label>
+              <input type="text-center" class="form-control" id="num_empleado" placeholder="92454">
+              </div>
+            </div> 
+          </div>
+          <div class="form-group">
+                   <div class="row">
+                    <div class="col">
+                     <a href="#" class="btn btn-primary">Aceptar</a>
+                     <a href="#" class="btn btn-primary">Cancelar</a>
+                    </div>
+                </div>
+              </div>
+          </form>  
+        </div> 
+      </div>
+
 </section>
 
 
@@ -386,9 +535,12 @@
       b = document.getElementById('nl1');
       b.style.display = 'block';
    x.style.background = 'orange';
+  }
 
 
-}
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 
 
