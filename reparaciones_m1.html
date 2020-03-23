@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="imagenes/icon_logo_03.gif">
+    <title>IRIS Inspeccion, Retrabajo, Sorteo 
+  </title>
+
+    <!-- Bootstrap core CSS -->
+    <link async href="css/bootstrap.css" rel="stylesheet">
+    <link async href="css/carousel.css" rel="stylesheet">
+    <link  async rel="stylesheet" href="css/estilos.css">
+    <link  async rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </head>
+ 
+  <body>
+  
+
+
+  <!-- Content here -->
+
+<header>
+  
+  <div class="container fixed-top mb-5" style="background: #0E4E63; border-bottom:3px solid #FCC213 ">
+    <div class="row">
+              <div class="col-md-4 d-none d-md-block"><img src="imagenes/logo.png" alt="IRIS" class="logo_iris"></div>
+              <div class="col-sm-6 col-md-4 text-center user_text"> <i class="fas fa-user"></i> Ian Rodrigo </div>  
+              <div class="col-sm-6 col-md-4 iconos_menu ">
+                <div class="text-center">
+                <a href="#"><i class="fas fa-th"></i></a>
+                <a href="#"><i class="fas fa-user-cog"></i></a>
+                <a href="#"><i class="fas fa-bell"></i></a>
+                <a href="#"><i class="fas fa-question-circle"></i></a>                                  
+                </div>
+              </div>   
+  </div> 
+</div> 
+</header>
+
+<main class="fondo">
+<div class="container mt-5" style="background: #E0E0E0;">
+<div class="contenedor_cuerpo" style="background: orange;">
+      <div class="card mb-2">
+      <div class="card-body">  
+          <h2>Reparaciones</h2>
+          <div class="row">
+            <div class="col-md-9">
+              <h4 class="color_azul"> <i class="fas fa-filter color_azul"></i>Filtrar por:</h4>
+            </div>
+            <div class="col-md-3">
+              <a href="#" class="btn btn-primary btn-lg"> <i class="fas fa-plus-square"></i> Agregar Reparacion</a>
+            </div>
+        </div>
+        <div class="row">
+              <div class="col-md-4">
+               <div class="form-group">
+              <label for="exampleFormControlSelect1">Seleccione Año</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1970</option>
+                  <option>1973</option>
+                  <option>1974</option>      
+                </select>
+                </div>
+            </div> 
+            <div class="col-md-4">
+                <div class="form-group">
+                <label for="exampleFormControlSelect1">Mes</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Enero</option>
+                  <option>Febrero</option>
+                  <option>Marzo</option>      
+                </select>
+              </div>   
+            </div>
+            <div class="col-md-4">
+               <div class="form-group">
+                <label for="exampleFormControlSelect1">Tipo</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Cerrajería</option>
+                  <option>Plomería</option>
+                  <option>Electricidad</option>      
+                </select>
+            </div>
+          </div>
+      </div>
+      <p class="text-center "><a href="#" class="btn btn-primary btn-lg">Filtrar</a>  </p>
+</div>
+</div>
+
+<section id="agrego_reporte">
+    <div class="card mb-2">
+      <div class="card-header color_azul_suave">
+        <strong> <h4>Numero de reparacion: 150</h42></strong>
+         <div class="float-right"><h6 style="float: left;">Estatus</h6><i class="fas fa-traffic-light fa-lg mx-2" style="color:green; "></i></div>
+      </div>
+      <div class="card-body">
+              <div class="row">
+                  <div class="col-md-4">
+                    <label for="titulo_repo"> <strong>Titulo del Reporte</strong></label>
+                    <input type="text" class="form-control color_azul_suave" placeholder="Cambio de chapa">
+                  </div>
+                  <div class="col-md-4  ">
+                      <label for="fecha_repo"><strong>Fecha</strong> </label>
+                      <input type="date" class="form-control color_azul_suave">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="importe_repo"> <strong>Importe:</strong></label>
+                    <input type="text" class="form-control color_azul_suave" placeholder="Cambio de chapa">
+                  </div>
+          </div>
+        <div class="row mt-2">
+            <div class="col-md-8">
+           <label for="importe_repo"> <strong>Texto del reporte:</strong></label>
+               <textarea class="form-control color_azul_suave" id="exampleFormControlTextarea1" rows="3">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur pariatur natus, iste, inventore optio cum nobis, impedit obcaecati culpa et dicta praesentium molestiae voluptates possimus saepe qui ducimus error voluptate?
+               </textarea>
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-info mt-5">Enviar</button>         
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-info mt-5">Cancelar </button>       
+            </div>    
+          </div>
+        </div>
+      </div>
+</section>
+
+<section id="listado_reportes">
+ <div class="card mb-2">
+  <div class="card-body">
+      <table class="table ">
+          <thead>
+            <tr class="text-center color_azul_suave">
+              <th scope="col">Num. Reporte</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Descripcción</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Importe</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-center">
+              <td>1250</td>
+              <td>Cerrajería</td>
+              <td>Cambio de chapa</td>
+               <td>13 /2/2020</td>
+               <td>$2500</td>
+               <td><button type="button" class="btn btn-info">Ver más</button></td>
+            </tr>
+            <tr class="text-center">
+              <td>1253</td>
+              <td>Cerrajería</td>
+              <td>Cambio de chapa</td>
+               <td>13 /2/2020</td>
+               <td>$2500</td>
+               <td><button type="button" class="btn btn-info">Ver más</button></td>
+            </tr>
+            <tr class="text-center">
+              <td>1253</td>
+              <td>Cerrajería</td>
+              <td>Cambio de chapa</td>
+               <td>13 /2/2020</td>
+               <td>$2500</td>
+               <td><button type="button" class="btn btn-info">Ver más</button></td>
+            </tr>
+           
+          </tbody>
+    </table>
+  </div>
+  <nav aria-label="Page navigation example" class="mx-auto">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</div>     
+</section>
+<section id=detalle>
+    <div class="card mb-2">
+  <div class="card-body">  
+    <div class="row px-2">
+        <div class="col-10 titulo_seccion">
+          Cambio de chapa    
+        </div>
+        <div class="col-2 titulo_seccion">
+          <button type="button" class="btn btn-info">Editar Reporte</button> 
+        </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <strong>Fecha: 13 /2/2020</strong> <br>
+        <strong>Importe: $2500</strong> <br>
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aliquam dicta reprehenderit architecto sed, ut repellat possimus sint perspiciatis, ad. Amet, consequuntur. Dignissimos cumque laborum, in veniam! Assumenda, quas, commodi!
+      </div>
+    </div>
+  </div>
+</div> 
+</section>
+
+<section id="editar" class=" mb-5">
+    <form action=""> 
+      <div class="card mb-2">
+         <div class="card-header color_azul_suave mb-2">
+            <strong> <h4>Editar reporte 150</h4> </strong>
+         
+          </div>
+        <div class="card-body"> 
+         
+      <div class="row">    
+        <div class="col-md-4">
+          <label for="titulo_repo"> <strong>Titulo del Reporte</strong></label>
+          <input type="text" class="form-control color_azul_suave" placeholder="Cambio de chapa">
+        </div>
+        <div class="col-md-4  ">
+          <label for="fecha_repo"><strong>Fecha</strong> </label>
+          <input type="date" class="form-control color_azul_suave">
+        </div>
+        <div class="col-md-4">
+          <label for="importe_repo"> <strong>Importe:</strong></label>
+            <input type="text" class="form-control color_azul_suave" placeholder="Cambio de chapa">
+        </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-8">
+       <label for="importe_repo"> <strong>Texto del reporte:</strong></label>
+           <textarea class="form-control color_azul_suave" id="exampleFormControlTextarea1" rows="3">
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur pariatur natus, iste, inventore optio cum nobis, impedit obcaecati culpa et dicta praesentium molestiae voluptates possimus saepe qui ducimus error voluptate?
+           </textarea>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-info mt-5">Editar Reporte</button> 
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-info btn-danger mt-5">Cancelar </button> 
+        </div>
+    </div>
+     <div class="row mt-3">
+      <div class="col-md-8">
+       <label for="importe_repo"> <strong>Subir Evidencia:</strong></label><br>
+         <p class="text-center"> 
+         <img src="img/cerradura.webp" alt="" class="img-thumbnail">
+                <button type="button" class="btn btn-info mt-5">Subir Fotos</button> 
+          </p>
+        </div>
+        <div class="col-md-2">
+          
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-info btn-danger mt-5">Cancelar </button> 
+        </div>
+    </div>
+  
+  </div>
+  </div>
+</div>
+</div>   
+ </form>
+
+</section>
+
+
+
+
+
+   
+       
+
+  
+
+</div>   
+
+
+
+</main>
+
+
+  <!-- ./Footer -->
+<script>
+
+   function show_notes(){
+    notas = document.getElementById('notas');
+    notas.style.display = 'block';
+   }
+
+
+   function show_preferencias(){
+    resenas = document.getElementById('resenas');
+    preferencias = document.getElementById('preferencias');
+    preferencias.style.display = 'block';
+    resenas.style.display = 'none';
+    editar_datos.style.display = 'none';
+    console.log('jala prefrencias');
+   }
+
+   function show_resenas(){
+    resenas = document.getElementById('resenas');
+    preferencias = document.getElementById('preferencias');
+    preferencias.style.display = 'none';
+    resenas.style.display = 'block';
+    editar_datos.style.display = 'none';
+    console.log('jala prefrencias');
+   }
+
+
+   function editar_perfil(){
+    editar_datos = document.getElementById('editar_datos');
+    resenas = document.getElementById('resenas');
+    preferencias = document.getElementById('preferencias');
+    preferencias.style.display = 'none';
+    resenas.style.display = 'none';
+    editar_datos.style.display = 'block';
+    console.log('jala prefrencias');
+   }
+
+
+
+</script>
+     
+
+ 
+
+
+
+
+      
+
+
+
+
+
+
+      
+
+
+
+
+ 
+  
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+</body></html>  
