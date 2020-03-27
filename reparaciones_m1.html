@@ -45,19 +45,19 @@
 <div class="contenedor_cuerpo" style="background: orange;">
       <div class="card mb-2">
       <div class="card-body">  
-          <h2>Reparaciones</h2>
+          <h2>Reportes</h2>
           <div class="row">
             <div class="col-md-9">
               <h4 class="color_azul"> <i class="fas fa-filter color_azul"></i>Filtrar por:</h4>
             </div>
             <div class="col-md-3">
-              <a href="#" class="btn btn-primary btn-lg"> <i class="fas fa-plus-square"></i> Agregar Reparacion</a>
+              <a href="#" class="btn btn-primary btn-lg"> <i class="fas fa-plus-square"></i> Agregar un reporte</a>
             </div>
         </div>
         <div class="row">
               <div class="col-md-4">
                <div class="form-group">
-              <label for="exampleFormControlSelect1">Seleccione Año</label>
+              <label for="exampleFormControlSelect1">Fecha</label>
                 <select class="form-control" id="exampleFormControlSelect1">
                   <option>1970</option>
                   <option>1973</option>
@@ -67,21 +67,21 @@
             </div> 
             <div class="col-md-4">
                 <div class="form-group">
-                <label for="exampleFormControlSelect1">Mes</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>Enero</option>
-                  <option>Febrero</option>
-                  <option>Marzo</option>      
-                </select>
-              </div>   
-            </div>
-            <div class="col-md-4">
-               <div class="form-group">
                 <label for="exampleFormControlSelect1">Tipo</label>
                 <select class="form-control" id="exampleFormControlSelect1">
                   <option>Cerrajería</option>
                   <option>Plomería</option>
                   <option>Electricidad</option>      
+                </select>
+              </div>   
+            </div>
+            <div class="col-md-4">
+               <div class="form-group">
+                <label for="exampleFormControlSelect1">Supervisor</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Felix Gallardo</option>
+                  <option>Antonio Caso</option>
+                  <option>Pedro Paramo</option>      
                 </select>
             </div>
           </div>
@@ -93,37 +93,65 @@
 <section id="agrego_reporte">
     <div class="card mb-2">
       <div class="card-header color_azul_suave">
-        <strong> <h4>Numero de reparacion: 150</h42></strong>
+        <strong> <h4>Numero de reporte</h42></strong>
          <div class="float-right"><h6 style="float: left;">Estatus</h6><i class="fas fa-traffic-light fa-lg mx-2" style="color:green; "></i></div>
       </div>
       <div class="card-body">
               <div class="row">
                   <div class="col-md-4">
-                    <label for="titulo_repo"> <strong>Titulo del Reporte</strong></label>
+                    <label for="titulo_repo"> <strong>Titulo de la reparación</strong></label>
                     <input type="text" class="form-control color_azul_suave" placeholder="Cambio de chapa">
                   </div>
-                  <div class="col-md-4  ">
-                      <label for="fecha_repo"><strong>Fecha</strong> </label>
+                  <div class="col-md-2">
+                      <label for="fecha_reporte"><strong>Fecha</strong> </label>
                       <input type="date" class="form-control color_azul_suave">
                   </div>
-                  <div class="col-md-4">
-                    <label for="importe_repo"> <strong>Importe:</strong></label>
-                    <input type="text" class="form-control color_azul_suave" placeholder="Cambio de chapa">
+                  <div class="col-md-2">
+                    <label for="importe_reporte"> <strong>Tipo:</strong></label>
+                    <select class="form-control color_azul_suave " id="exampleFormControlSelect1">
+                      <option>Cerrajería</option>
+                      <option>Plomería</option>
+                      <option>Electricidad</option>     
+                    </select>
+                  </div>
+
+                  <div class="col-md-2">
+                    <label for="importe_reporte"> <strong>Estatus:</strong></label>
+                     <select class="form-control color_azul_suave" id="exampleFormControlSelect1">
+                      <option>En proceso</option>
+                      <option>Terminado</option>
+                      <option>Inconcluso</option>     
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                      <label for="fecha_reporte"><strong>Fecha de cierre</strong> </label>
+                      <input type="date" class="form-control color_azul_suave">
                   </div>
           </div>
-        <div class="row mt-2">
+        <div class="row mt-3">
             <div class="col-md-8">
            <label for="importe_repo"> <strong>Texto del reporte:</strong></label>
                <textarea class="form-control color_azul_suave" id="exampleFormControlTextarea1" rows="3">
                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur pariatur natus, iste, inventore optio cum nobis, impedit obcaecati culpa et dicta praesentium molestiae voluptates possimus saepe qui ducimus error voluptate?
                </textarea>
             </div>
-            <div class="col-md-2">
-              <button type="button" class="btn btn-info mt-5">Enviar</button>         
+            <div class="col-md-4">
+               <label for="importe_repo"> <strong>Evidencia:</strong></label> <br>
+                   <img src="imagenes/cerradura.webp" alt="Cerradu" class="img-fluid"  width="300px;">
+                    <img src="imagenes/cerradura.webp" alt="Cerradu" class="img-thumbnail"  width="80px;">
+                    <img src="imagenes/cerradura.webp" alt="Cerradu" class="img-thumbnail"  width="80px;">
+                    <img src="imagenes/cerradura.webp" alt="Cerradu" class="img-thumbnail"  width="80px;">
+                     <a href="#" class="btn btn-primary mt-3">Agregar Evidencia</a>
             </div>
-            <div class="col-md-2">
-              <button type="button" class="btn btn-info mt-5">Cancelar </button>       
-            </div>    
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-12">
+                  
+                <p class="text-center ">
+                <a href="#" class="btn btn-primary btn-lg">Agregar Reporte</a>
+                 <a href="#" class="btn btn-danger btn-lg">Cancelar</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -135,40 +163,41 @@
       <table class="table ">
           <thead>
             <tr class="text-center color_azul_suave">
-              <th scope="col">Num. Reporte</th>
-              <th scope="col">Tipo</th>
-              <th scope="col">Descripcción</th>
+              <th scope="col">Num.</th>
               <th scope="col">Fecha</th>
-              <th scope="col">Importe</th>
-              <th scope="col">Acciones</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Estatus</th>
+              <th scope="col">Fecha de Cierre</th>
+              <th scope="col">Evidencia</th>
+              <th scope="col">Accion</th>
             </tr>
           </thead>
           <tbody>
             <tr class="text-center">
-              <td>1250</td>
+              <td>1</td>
+              <td>13 /2/2020</td>
               <td>Cerrajería</td>
               <td>Cambio de chapa</td>
-               <td>13 /2/2020</td>
-               <td>$2500</td>
+              <td>En proceso</td>
+               <td>13 /2/2020</td>            
+               <td> <img src="imagenes/cerradura.webp" alt="Cerradu" class="img-thumbnail"  width="80px;"></td>
                <td><button type="button" class="btn btn-info">Ver más</button></td>
             </tr>
-            <tr class="text-center">
-              <td>1253</td>
+             <tr class="text-center">
+              <td>1</td>
+              <td>13 /2/2020</td>
               <td>Cerrajería</td>
               <td>Cambio de chapa</td>
-               <td>13 /2/2020</td>
-               <td>$2500</td>
+              <td>En proceso</td>
+               <td>13 /2/2020</td>            
+               <td> <img src="imagenes/cerradura.webp" alt="Cerradu" class="img-thumbnail"  width="80px;"></td>
                <td><button type="button" class="btn btn-info">Ver más</button></td>
             </tr>
-            <tr class="text-center">
-              <td>1253</td>
-              <td>Cerrajería</td>
-              <td>Cambio de chapa</td>
-               <td>13 /2/2020</td>
-               <td>$2500</td>
-               <td><button type="button" class="btn btn-info">Ver más</button></td>
-            </tr>
+
+             
            
+            
           </tbody>
     </table>
   </div>
@@ -199,15 +228,18 @@
           Cambio de chapa    
         </div>
         <div class="col-2 titulo_seccion">
-          <button type="button" class="btn btn-info">Editar Reporte</button> 
+          <button type="button" class="btn btn-info">Editar </button> 
         </div>
     </div>
     <div class="row mt-3">
-      <div class="col">
+      <div class="col-md-7">
         <strong>Fecha: 13 /2/2020</strong> <br>
         <strong>Importe: $2500</strong> <br>
-
+        <strong>Estatus: Cerrado</strong> <br>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aliquam dicta reprehenderit architecto sed, ut repellat possimus sint perspiciatis, ad. Amet, consequuntur. Dignissimos cumque laborum, in veniam! Assumenda, quas, commodi!
+      </div>
+      <div class="col-md-4">
+        <img src="imagenes/cerradura.webp" alt="Cerradu" class="img-thumbnail"  width="200px;">
       </div>
     </div>
   </div>
